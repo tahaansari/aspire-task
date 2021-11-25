@@ -1,16 +1,21 @@
 <template>
     <div class="card-tab">
         <div class="card-tab__item">
-            <a href="#" class="card-tab__anchor card-tab__anchor--active">My debit cards</a>
+            <a href="#" class="card-tab__anchor" v-bind:class="{ 'card-tab__anchor--active' : selected == 1}" v-on:click="selected = 1">My debit cards</a>
         </div>
         <div class="card-tab__item">
-            <a href="#" class="card-tab__anchor">All company cards</a>
+            <a href="#" class="card-tab__anchor" v-bind:class="{ 'card-tab__anchor--active' : selected == 2}" v-on:click="selected = 2">All company cards</a>
         </div>
     </div>
 </template>
 
 <script>
 export default {
+    data(){
+        return{
+            selected:1
+        }
+    },
 
 }
 </script>
