@@ -8,9 +8,9 @@
         <transaction/>
         <transaction/>
         <transaction/>
-      </div>
-      <div class="recent-transaction__viewall">
-        <a href="#">View all card transactions</a>
+        <div class="recent-transaction__viewall">
+          <a href="#">View all card transactions</a>
+        </div>
       </div>
   </div>
 </template>
