@@ -22,6 +22,7 @@ export default {
         display: flex;
         align-items: center;
         margin-top: 10px;
+        font-weight: 700;
     }
     &__currency{
         background-color: $color-green;

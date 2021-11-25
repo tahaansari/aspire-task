@@ -29,15 +29,20 @@ export default {
 <style lang="scss">
 @import "@/assets/styles/variables.scss";
 .debit-card{
-    position: relative;
+    position: fixed;
+    top: 180px;
+    width: calc(100% - 48px);
+    margin: 0 24px;
+    padding-top: 27px;
+    margin-bottom: 24px;
     @media (min-width: $md) {
-        max-width: 50%;
+        position: relative;
+        top: 0;
     }
     &__showcardnumber{
         position: absolute;
         top:0;
         right: 0;
-        transform: translateY(-100%);
         background-color: $color-white;
         color:$color-green;
         padding: 4px;
@@ -71,11 +76,8 @@ export default {
         padding: 24px;
         background-color: $color-green;
         border-radius: 12px;
-        margin-top: 54px;
+        color:$color-white;
         font-weight: 700;
-        @media (min-width: $md) {
-            color:$color-white;
-        }
     }
     &__logo{
         margin-bottom: 20px;

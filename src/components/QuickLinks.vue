@@ -1,26 +1,26 @@
 <template>
   <div class="quick-links">
-      <div class="quick-links-item">
+      <div class="quick-links__item">
           <a class="quick-links__icon quick-links__icon--freezecard" href="#">
               Freeze card
           </a>
       </div>
-      <div class="quick-links-item">
+      <div class="quick-links__item">
           <a class="quick-links__icon quick-links__icon--setspendlimit" href="#">
               Set spend limit
           </a>
       </div>
-      <div class="quick-links-item">
+      <div class="quick-links__item">
           <a class="quick-links__icon quick-links__icon--addtogpay" href="#">
               Add to GPay
           </a>
       </div>
-      <div class="quick-links-item">
+      <div class="quick-links__item">
           <a class="quick-links__icon quick-links__icon--replacecard" href="#">
               Replace card
           </a>
       </div>
-      <div class="quick-links-item">
+      <div class="quick-links__item">
           <a class="quick-links__icon quick-links__icon--cancelcard" href="#">
               Cancel card
           </a>
@@ -44,7 +44,8 @@ export default {
     border-top-right-radius: 15px;
     padding: 20px 27px;
     @media (min-width: $md) {
-        // max-width: 414px;
+        margin: 0 24px;
+        border-radius: 15px;
     }
     &__item{
         padding: 0 5px;

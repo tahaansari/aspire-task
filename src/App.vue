@@ -1,12 +1,23 @@
 <template>
   <svg class="logo" xmlns="http://www.w3.org/2000/svg" width="23.991" height="23.433" viewBox="0 0 23.991 23.433"><defs></defs><path fill="#01d167" d="M23.5,14.772c0,.067,0,.133-.069.133a.149.149,0,0,1-.138-.133c-.207-.266-10.675-11.323-11.157-11.723-.207-.2-.275-.133-.482.067C11.588,3.182.707,14.639.569,14.838c-.069.067-.138.067-.138-.067a10.912,10.912,0,0,1-.413-3.663A10.341,10.341,0,0,1,1.533,6.046,11.451,11.451,0,0,1,9.384.318,11.829,11.829,0,0,1,20.61,3.582a10.907,10.907,0,0,1,3.237,6.261,8.818,8.818,0,0,1,.138,1.932A15.1,15.1,0,0,1,23.5,14.772Z" transform="translate(0 0)"/><path fill="#01d167" d="M.08,9.109c-.069-.067-.138-.133,0-.266S8.275.25,8.482.05c.069-.067.138-.067.138,0,.275.333,8.2,8.726,8.4,8.859.069.067.069.133-.069.133a9.34,9.34,0,0,1-1.515,1.266,11.776,11.776,0,0,1-5.923,2.131,6.121,6.121,0,0,1-1.1.067A11.907,11.907,0,0,1,.08,9.109Z" transform="translate(3.451 10.925)"/></svg>
-  <cards/>
-  <debit-card/>
-  <div class="drawer">
-    <quick-links/>
-    <card-details/>
-    <recent-transactions/>
-  </div> 
+  <div class="main-content">
+    <cards/>
+    <div class="main-content__box">
+      <div class="main-content__left">
+        <debit-card/>
+        <quick-links/>
+      </div>
+      <div class="main-content__right">
+        <div class="drawer">
+            <quick-links/>
+            <div class="details">
+              <card-details/>
+              <recent-transactions/>
+            </div>
+        </div>
+      </div>
+      </div>
+    </div>
   <bottom-nav/>
 </template>
 
@@ -43,8 +54,49 @@ export default {
     display: none;
   }
 }
+.main-content{
+  background-color: $color-darkestblue;
+  @media (min-width: $md) {
+    background-color: $color-white;
+    margin-left: 340px;
+  }
+  &__box{
+    @media (min-width: $md) {
+      display: flex;
+      margin: 0 24px;
+      padding:24px;
+      border-radius: 8px;
+      box-shadow: 0px 2px 12px 0px $color-boxshadow;
+    }
+  }
+  &__left{
+    flex: 1;
+    .quick-links{
+      display: none;
+      @media (min-width: $md) {
+        display: flex;
+      }
+    }
+  }
+  &__right{
+    flex: 1;
+    .quick-links{
+      display: flex;
+      @media (min-width: $md) {
+        display: none;
+      }
+    }
+  }
+}
+.details{
+  background-color: $color-white;
+  padding-top: 12px;
+  padding-bottom: 80px;
+  @media (min-width: $md) {
+    padding-bottom: 20px;
+  }
+}
 .drawer{
-  background: $color-white;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   position: absolute;
@@ -52,12 +104,8 @@ export default {
   width: 100%;
   left: 0;
   top: 55vh;
-  padding-bottom: 70px;
   @media (min-width: $md) {
     position: static;
-    margin-left: 400px;
-    width:calc(100% - 400px);
-    padding: 24px;
   }
 }
 </style>

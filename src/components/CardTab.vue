@@ -29,8 +29,9 @@ export default {
         opacity: .5;
     }
     &__anchor--active{
-        opacity: 1;
+        opacity: 1; 
         border-bottom: 2px solid $color-skyblue;
+        font-weight: 700;
     }
 }
 </style>

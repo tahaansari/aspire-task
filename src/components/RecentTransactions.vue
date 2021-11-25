@@ -26,8 +26,7 @@ export default {
 <style lang="scss">
 @import "@/assets/styles/variables.scss";
 .recent-transaction{
-  border-radius: 8px;
-  margin: 24px;
+  padding: 12px 24px;
   &__list{
     border: 1px solid $color-border;
     border-top: 0;
